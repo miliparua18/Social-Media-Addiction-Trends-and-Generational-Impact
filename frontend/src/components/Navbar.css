@@ -1,0 +1,121 @@
+/* Navbar.css */
+:root {
+  --bg-dark: #061d18;      /* Deep Emerald Black */
+  --accent-gold: #c4fb6d;  /* Electric Lime/Gold */
+  --text-light: #f1f5f9;
+  --glass-emerald: rgba(6, 29, 24, 0.85);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* State when scrolled */
+.navbar.scrolled {
+  padding: 15px 0;
+  background: var(--glass-emerald);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(196, 251, 109, 0.2);
+}
+
+.nav-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+/* Logo with a pulse effect */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--accent-gold);
+}
+
+.logo h2 {
+  color: var(--text-light);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.logo h2 span {
+  color: var(--accent-gold);
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+/* Links with an "Overline" effect */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.link {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--accent-gold);
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+/* Unique Neon Border Button */
+.nav-btn {
+  background: transparent;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn:hover {
+  background: var(--accent-gold);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px rgba(196, 251, 109, 0.4);
+}

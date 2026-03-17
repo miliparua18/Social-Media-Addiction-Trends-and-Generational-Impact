@@ -1,0 +1,143 @@
+/* Footer.css */
+.footer {
+  background: #050d1a; /* Slightly darker than your page bg for depth */
+  color: #94a3b8;
+  padding: 50px 0 30px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing top border */
+.footer-gradient-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+  opacity: 0.5;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+/* Brand Column */
+.footer-logo {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.footer-logo span {
+  color: #00f2ff;
+  font-weight: 300;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+/* Team Links */
+.footer-links h4{
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+.footer-status h4 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links a:hover {
+  color: #00f2ff;
+  transform: translateX(5px);
+}
+
+.dev-tag {
+  font-size: 0.65rem;
+  background: rgba(0, 242, 255, 0.1);
+  color: #00f2ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+/* System Status Column */
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 15px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

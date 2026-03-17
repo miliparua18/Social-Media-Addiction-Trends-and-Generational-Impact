@@ -1,0 +1,413 @@
+/* src/App.css */
+
+/* --- Base/Reset Styles --- */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; 
+    background-color: #f7f9fc; 
+    -webkit-font-smoothing: antialiased; /* Smoother text on Android/iOS */
+}
+
+.landing-page-container {
+    min-height: 100vh;
+    position: relative;
+    background-color: white;
+}
+
+.page-content {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+
+/* --- Header Styles --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+}
+
+.sign-up-button {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.sign-up-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- Hero Section Layout & Content --- */
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 50px 80px 50px;
+    min-height: calc(100vh - 80px);
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+    z-index: 5; 
+}
+
+/* LEFT SIDE: Text Content Styles */
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-title {
+    font-size: 4em;
+    color: #007bff; 
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.dark-madness {
+    color: #191970; 
+}
+
+.hero-subtitle {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 12px 25px; 
+    border-radius: 50px; 
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block; 
+}
+
+.cta-button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* RIGHT SIDE: Graphic Container Styles */
+.hero-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    position: relative;
+    margin-left: 100px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px; 
+    display: block; 
+}
+
+/* --- COMPLEX BACKGROUND SHAPE --- */
+.top-right-bg-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 750px;
+    border-bottom-left-radius: 40% 100%; 
+    background-color:#a1d1f8;
+    z-index: 1; 
+}
+
+
+/* ###################################################### */
+/* --- NEW SERVICES SECTION STYLES --- */
+/* ###################################################### */
+
+.services-section {
+    padding: 80px 50px;
+    background-color: #f7f9fc;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #191970;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
+}
+
+.service-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #191970;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.service-link:hover {
+    color: #007bff;
+}
+
+
+/* ###################################################### */
+/* --- NEW TEAM MEMBERS SECTION STYLES --- */
+/* ###################################################### */
+
+.members-section {
+    padding: 80px 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.member-card {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f7f9fc;
+    border: 1px solid #e1e1e1;
+    transition: all 0.3s;
+    opacity: 0;
+    animation: zoomIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.member-card:hover {
+    background-color: #e6f0ff;
+}
+
+.member-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+.member-avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-card h4 {
+    margin: 0 0 5px 0;
+    color: #191970;
+}
+
+.member-role {
+    color: #777;
+    font-size: 0.9em;
+}
+
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+.delay-5 { animation-delay: 0.7s; }
+
+
+/* ###################################################### */
+/* --- RESPONSIVE OPTIMIZATIONS (ANDROID & MOBILE) --- */
+/* ###################################################### */
+
+/* Tablets and Mobile Phones */
+@media (max-width: 992px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .content-wrapper {
+        flex-direction: column; 
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        order: 2; /* Text below image on mobile */
+    }
+
+    .hero-title {
+        font-size: 2.8em;
+    }
+
+    .hero-graphic {
+        order: 1; /* Image on top */
+        justify-content: center; 
+        margin-left: 0;
+    }
+
+    .hero-image {
+        max-width: 80%;
+    }
+
+    .top-right-bg-shape {
+        width: 100%;
+        height: 400px;
+        border-bottom-left-radius: 0; 
+        border-bottom-right-radius: 50% 20%;
+    }
+
+    .services-section, .members-section, .page-content {
+        padding: 60px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+/* Specific Android/Small Screen Fixes */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sign-up-button {
+        margin-left: 0;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .hero-title {
+        font-size: 2.2em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .services-grid, .members-grid {
+        grid-template-columns: 1fr; /* Strict vertical list for phone screens */
+    }
+}

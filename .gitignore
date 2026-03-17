@@ -1,0 +1,8 @@
+node_modules/
+venv/
+.env/
+.ipynb_checkpoints/
+*.csv
+*.json
+.DS_Store
+Thumbs.db
