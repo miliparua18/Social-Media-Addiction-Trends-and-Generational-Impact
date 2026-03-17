@@ -99,9 +99,6 @@ cd frontend<br>
 npm install<br>
 npm start<br>
 
-### 4. Generate Future Forecast
-cd ml<br>
-python forecast_script.py
 
 ## 📈 Output Highlights
 
@@ -112,23 +109,23 @@ python forecast_script.py
 
 ## 📚 Applications
 
-Digital wellness awareness
-Behavioral research
-Educational projects
-Social trend analysis
+- Digital wellness awareness
+- Behavioral research
+- Educational projects
+- Social trend analysis
 
 ## 🔮 Future Enhancements
 
-Deep learning models (LSTM, GRU)
-Real-time data integration
-Advanced recommendation system
-Mobile application
+- Deep learning models (LSTM, GRU)
+- Real-time data integration
+- Advanced recommendation system
+- Mobile application
 
 ## 👨‍💻 Team
 
-Sankar Bhunia
-Mili Parua
-Sayantan Ghosh
+- Mili Parua
+- Sankar Bhunia
+- Sayantan Ghosh
 
 ## 📜 License
 
