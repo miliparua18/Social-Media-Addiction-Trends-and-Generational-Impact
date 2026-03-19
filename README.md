@@ -86,7 +86,7 @@ This project focuses on understanding the impact of social media usage by combin
 
 ### 1. Clone the Repository
 
-git clone https://github.com/Sankar018/Social-Media-Addiction-Trends-and-Generational-Impact.git
+git clone https://github.com/miliparua18/Social-Media-Addiction-Trends-and-Generational-Impact.git
 <br>
 cd Social-Media-Addiction-Trends-and-Generational-Impact
 
