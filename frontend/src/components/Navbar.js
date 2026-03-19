@@ -23,7 +23,7 @@ const Navbar = () => {
           <a href="/questionnaire" className="link">Predict Addiction</a>
           <a href="/dashboard" className="link">Details Report</a>
           <a href="/areavisual" className="link">Your Area</a>
-          <a href="/areavisual" className="link">Future Trends</a>
+          <a href="/futureprediction" className="link">Future Trends</a>
         </div>
       </div>
     </nav>
